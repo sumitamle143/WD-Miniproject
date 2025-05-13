@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indoor Sports</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+    nav button {
+      background: #1e90ff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #187bcd;
+    }
+    .content {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .sport {
+      margin-bottom: 20px;
+    }
+    .sport h2 {
+      color: #1e90ff;
+    }
+    .gallery {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      border-color: #1e90ff;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #1e90ff;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏆 Indoor Sports Explorer</h1>
+    <p>Learn about popular indoor sports and their benefits</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('sports')">Popular Sports</button>
+    <button onclick="showSection('gallery')">Image Gallery</button>
+    <button onclick="showSection('about')">About</button>
+  </nav>
+
+  <div class="content" id="sportsSection">
+    <div class="sport">
+      <h2>🏸 Badminton</h2>
+      <p>A fast-paced racquet sport played with a shuttlecock. Great for improving agility and reflexes.</p>
+    </div>
+    <div class="sport">
+      <h2>🏓 Table Tennis</h2>
+      <p>Also known as ping pong, this sport is excellent for hand-eye coordination and concentration.</p>
+    </div>
+    <div class="sport">
+      <h2>🥋 Martial Arts</h2>
+      <p>Includes karate, taekwondo, judo, and more. Builds discipline, strength, and self-defense skills.</p>
+    </div>
+    <div class="sport">
+      <h2>🏐 Volleyball (Indoor)</h2>
+      <p>A team sport that enhances teamwork, agility, and physical fitness.</p>
+    </div>
+    <div class="sport">
+      <h2>♟️ Chess</h2>
+      <p>A strategic board game played indoors. It develops critical thinking and planning skills.</p>
+    </div>
+  </div>
+
+  <div class="content" id="gallerySection" style="display: none;">
+    <h2>📸 Indoor Sports Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/180x120?text=Badminton" alt="Badminton">
+      <img src="https://via.placeholder.com/180x120?text=Table+Tennis" alt="Table Tennis">
+      <img src="https://via.placeholder.com/180x120?text=Martial+Arts" alt="Martial Arts">
+      <img src="https://via.placeholder.com/180x120?text=Volleyball" alt="Volleyball">
+      <img src="https://via.placeholder.com/180x120?text=Chess" alt="Chess">
+    </div>
+  </div>
+
+  <div class="content" id="aboutSection" style="display: none;">
+    <h2>ℹ️ About This Website</h2>
+    <p>This website is a simple mini-project showcasing different types of indoor sports using basic HTML, CSS, and JavaScript. It is intended for learning and educational use. You can expand it by adding more details, images, or integrating sports news APIs.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Indoor Sports Mini Project | Designed for Learning
+  </footer>
+
+  <script>
+    function showSection(section) {
+      document.getElementById('sportsSection').style.display = 'none';
+      document.getElementById('gallerySection').style.display = 'none';
+      document.getElementById('aboutSection').style.display = 'none';
+
+      if (section === 'sports') {
+        document.getElementById('sportsSection').style.display = 'block';
+      } else if (section === 'gallery') {
+        document.getElementById('gallerySection').style.display = 'block';
+      } else if (section === 'about') {
+        document.getElementById('aboutSection').style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
